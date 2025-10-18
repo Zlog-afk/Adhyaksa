@@ -226,45 +226,78 @@
 <main class="container">
 <!-- Hero Section -->
 <section id="home" class="hero" data-aos="fade-up"
-  style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
-         min-height:100vh; padding:60px 8%; background:linear-gradient(135deg, #e0f7ff 0%, #f7fbff 100%); box-sizing:border-box;">
+  style="display:flex; align-items:center; justify-content:space-between;
+         flex-wrap:wrap; min-height:100vh; padding:60px 8%;
+         background:linear-gradient(135deg, #e0f7ff 0%, #f7fbff 100%);
+         box-sizing:border-box; position:relative; overflow:hidden;">
 
-  <!-- Teks Kiri -->
-  <div style="flex:1 1 50%; min-width:300px; z-index:2;">
-    <span style="display:inline-block; background:#0bb8e8; color:white; padding:6px 14px; border-radius:8px;
-                 font-weight:600; letter-spacing:0.5px; font-size:0.9rem;">24/7 Pelayanan</span>
+  <!-- Kolom Kiri (Teks) -->
+  <div style="flex:1 1 55%; min-width:300px; z-index:2;">
+    <span style="display:inline-block; background:#0bb8e8; color:white;
+                 padding:6px 14px; border-radius:8px; font-weight:600;
+                 letter-spacing:0.5px; font-size:0.9rem;">
+      24/7 Pelayanan
+    </span>
 
-    <h1 style="font-size:2.6rem; color:#0d2b5b; margin:24px 0 12px; line-height:1.3;">
-      Selamat Datang di <br><span style="color:#0bb8e8;">RS Adhyaksa Banten</span>
+    <h1 style="font-size:2.8rem; color:#0d2b5b; margin:24px 0 12px; line-height:1.3;">
+      Selamat Datang di <br>
+      <span style="color:#0bb8e8;">RS Adhyaksa Banten</span>
     </h1>
 
     <p style="color:#425066; font-size:1.05rem; line-height:1.8; max-width:540px;">
-      Menjadi rujukan utama layanan Kesehatan Yustisial di wilayah Provinsi Banten dengan layanan unggulan
-      yang terpercaya dan inovatif untuk masyarakat.
+      Menjadi rujukan utama layanan Kesehatan Yustisial di wilayah Provinsi Banten
+      dengan layanan unggulan yang terpercaya dan inovatif untuk masyarakat.
     </p>
 
     <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:28px;">
       <a href="#contact" 
-         style="background:#0bb8e8; color:#fff; padding:12px 26px; border-radius:10px; font-weight:700;
-                text-decoration:none; transition:all .3s ease;">
+         style="background:#0bb8e8; color:#fff; padding:12px 26px; border-radius:10px;
+                font-weight:700; text-decoration:none; transition:all .3s ease;">
          Daftar Sekarang
       </a>
       <a href="#services"
-         style="background:#fff; color:#0d2b5b; border:2px solid #0bb8e8; padding:12px 26px; border-radius:10px;
-                font-weight:700; text-decoration:none; transition:all .3s ease;">
+         style="background:#fff; color:#0d2b5b; border:2px solid #0bb8e8;
+                padding:12px 26px; border-radius:10px; font-weight:700;
+                text-decoration:none; transition:all .3s ease;">
          Lihat Layanan
       </a>
     </div>
   </div>
 
-  <!-- Gambar Kanan -->
-  <div style="flex:1 1 45%; display:flex; justify-content:center; align-items:center; position:relative; min-width:280px;">
+  <!-- Kolom Kanan (Gambar) -->
+  <div style="flex:1 1 40%; display:flex; justify-content:center; align-items:center;
+              position:relative; min-width:300px;">
     <img src="contohgambar3.png" alt="Dokter RS"
-         style="width:100%; height:auto; max-width:600px; object-fit:cover;
+         style="width:100%; max-width:550px; height:auto; object-fit:cover;
                 border-radius:24px; box-shadow:0 12px 40px rgba(0,0,0,0.08);">
   </div>
 
+  <!-- Tambahan styling responsif -->
+  <style>
+    @media (max-width: 768px) {
+      #home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 80px 6%;
+      }
+
+      #home img {
+        max-width: 90%;
+        margin-bottom: 24px;
+      }
+
+      #home h1 {
+        font-size: 2rem;
+      }
+
+      #home p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+
 </section>
+
 
 
   <!-- ===== Visi & Misi (Inovatif & Responsif) ===== -->
@@ -483,5 +516,6 @@
 </script>
 </body>
 </html>
+
 
 
