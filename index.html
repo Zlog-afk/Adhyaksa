@@ -83,42 +83,56 @@
       .menu-toggle { display: block; }
     }
 
-    /* Hero */
-    .hero {
-      background: url('img/hero.jpg') center/cover no-repeat;
-      border-radius: 18px;
-      margin: 20px 0;
-      padding: 60px 20px;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(10,30,60,0.45), rgba(10,30,60,0.55));
-      border-radius: 18px;
-    }
-    .hero .inner {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 16px;
-    }
+   /* Hero */
+.hero {
+  background-color: #ffffff; /* Ganti background jadi putih */
+  border-radius: 0; /* Hilangkan radius biar fullscreen */
+  margin: 0;
+  padding: 80px 5%;
+  color: #0a3d62; /* Teks jadi biru gelap */
+  position: relative;
+  overflow: hidden;
+}
 
-    @media(max-width:768px){
-      .hero .inner { flex-direction: column; text-align: center; }
-      .hero img { max-width: 90%; }
-    }
+.hero::after {
+  content: none; /* Hapus lapisan gradasi */
+}
+
+.hero .inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.hero img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsif */
+@media(max-width: 768px) {
+  .hero .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero img {
+    max-width: 80%;
+    margin-top: 20px;
+  }
+}
 
     /* Sections */
     section { padding: 40px 0; }
@@ -583,6 +597,7 @@
 </script>
 </body>
 </html>
+
 
 
 
