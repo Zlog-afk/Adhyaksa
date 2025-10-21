@@ -146,7 +146,7 @@ nav ul li a.active {
 
 /* ===== PARALLAX HERO (ABOUT) ===== */
 .hero-parallax {
-  background: url('rumahSakit.jpg') center/cover fixed no-repeat;
+  background: url('aboutimg.jpg') center/cover fixed no-repeat;
   height: 420px;
   position: relative;
   display: flex;
@@ -234,7 +234,7 @@ nav ul li a.active {
 
 /* ===== PARALLAX QUOTE ===== */
 .quote-parallax {
-  background: url('rumahSakit.jpg') center/cover fixed no-repeat;
+  background: url('aboutimg.jpg') center/cover fixed no-repeat;
   height: 300px;
   position: relative;
   margin-top: 80px;
