@@ -234,7 +234,7 @@ nav ul li a.active {
 
 /* ===== PARALLAX QUOTE ===== */
 .quote-parallax {
-  background: url('aboutimg.jpg') center/cover fixed no-repeat;
+  background: url('aboutimagefix.jpg') center/cover fixed no-repeat;
   height: 300px;
   position: relative;
   margin-top: 80px;
