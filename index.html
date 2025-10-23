@@ -6,46 +6,51 @@
   <title>Rumah Sakit Adhyaksa Banten</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="fade-in">
   <!-- HEADER -->
   <header>
-    <div class="container">
-      <div class="logo-area">
-        <img src="logoKejaksaan.png" alt="Logo RS Adhyaksa">
-        <img src="Sehati.png">
+    <div class="container nav">
+      <div class="logo">
+        <img src="logoKejaksaan.png" alt="RS Adhyaksa Banten" />
+        <img src="Sehati.png" alt="Sehati">
         <h1>Rumah Sakit Adhyaksa Banten</h1>
       </div>
+
       <nav>
+        <button class="menu-toggle">☰</button>
         <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="about2.html" class="active">Tentang Kami</a></li>
-          <li><a href="index.html#services">Layanan</a></li>
-          <li><a href="index.html#contact">Kontak</a></li>
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="about2.html">Tentang Kami</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#contact">Kontak</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO PARALLAX -->
+  <!-- HERO SECTION -->
+ <!-- HERO PARALLAX -->
   <section class="hero-parallax">
     <div class="overlay">
-      
+      <h2 data-aos="zoom-in">Tentang Rumah Sakit Adhyaksa Banten</h2>
     </div>
   </section>
 
   <!-- ABOUT SECTION -->
   <section class="section about" data-aos="fade-up">
-    <p data-aos="fade-up" data-aos-delay="200">
+   
+    <div class="visi-misi" data-aos="zoom-in" data-aos-delay="300">
+       <p data-aos="fade-up" data-aos-delay="200">
       Rumah Sakit Adhyaksa Banten merupakan rumah sakit rujukan utama bagi pelayanan kesehatan yustisial di wilayah Provinsi Banten.
       Kami berkomitmen memberikan pelayanan kesehatan yang profesional, cepat, dan berintegritas tinggi.
     </p>
 
-    <div class="visi-misi" data-aos="zoom-in" data-aos-delay="300">
       <h3><i class="fa-solid fa-eye"></i> Visi</h3>
       <p>Menjadi rumah sakit rujukan utama yang unggul, terpercaya, dan inovatif di bidang layanan kesehatan yustisial.</p>
 
@@ -58,27 +63,57 @@
       </ul>
     </div>
   </section>
+   <section id="services" data-aos="fade-up">
+      <div class="section-title"><h3>Layanan Kami</h3></div>
+      <div class="grid">
+        <div class="card"><span>🩺</span><h4>Rawat Jalan</h4><p>Pelayanan tanpa perlu menginap bagi pasien umum maupun yustisial.</p></div>
+        <div class="card"><span>🏥</span><h4>Rawat Inap</h4><p>Perawatan pasien yang memerlukan observasi lanjutan dan fasilitas nyaman.</p></div>
+        <div class="card"><span>🧪</span><h4>Laboratorium</h4><p>Pemeriksaan medis lengkap dan cepat dengan alat modern.</p></div>
+        <div class="card"><span>💊</span><h4>Farmasi</h4><p>Konsultasi dan pengadaan obat yang aman, terpercaya, dan terjangkau.</p></div>
+        <div class="card"><span>🚑</span><h4>Gawat Darurat</h4><p>Layanan 24 jam untuk menangani keadaan kritis dan darurat medis.</p></div>
+      </div>
+    </section>
 
-  <!-- PARALLAX QUOTE SECTION -->
+  <!-- TEAM PHOTO SECTION -->
+  <section id="dokter-c1" data-aos="fade-up">
+    <div class="portrait-container">
+      <img src="gambarDokterAll.jfif" alt="Foto Seluruh Dokter" />
+    </div>
+    <div class="portrait-caption">
+      <h3>Tim Dokter Kami</h3>
+      <p>Kami memiliki tim dokter profesional dan berpengalaman dalam berbagai bidang medis.</p>
+    </div>
+  </section>
+
+  <!-- QUOTE PARALLAX SECTION -->
   <section class="quote-parallax">
     <div class="overlay">
-      <h2 data-aos="zoom-in">“Melayani dengan Integritas dan Profesionalisme”</h2>
+      <h2 data-aos="zoom-in">"Melayani dengan Integritas dan Profesionalisme"</h2>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 RS Adhyaksa Banten. Semua Hak Dilindungi.</p>
+    <div class="container">
+      <p>&copy; 2025 RS Adhyaksa Banten. Semua Hak Dilindungi.</p>
+    </div>
   </footer>
 
-  <!-- AOS + Page Transition Script -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1200, once: true });
 
-    // Efek transisi halaman
+    // Menu toggle functionality
+    const toggle = document.querySelector('.menu-toggle');
+    const navUL = document.querySelector('nav ul');
+    if (toggle) {
+      toggle.addEventListener('click', () => navUL.classList.toggle('show'));
+    }
+
+    // Page transition effect
     document.querySelectorAll('a').forEach(link => {
-      if (link.hostname === window.location.hostname && !link.href.includes('#')) {
+      if (link.hostname === window.location.hostname && !link.href.includes('#') && link.getAttribute('href') !== 'about2.html') {
         link.addEventListener('click', e => {
           e.preventDefault();
           const href = link.getAttribute('href');
