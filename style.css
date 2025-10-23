@@ -23,7 +23,7 @@ header {
   color: white;
   padding: 16px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: sticky;
+  
   top: 0;
   z-index: 1000;
 }
@@ -72,8 +72,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  background: #edd968;
-  color: #00923f;
+  background: #00923f;
+  color:white;
 }
 
 /* ===== HERO SECTION (INDEX) ===== */
