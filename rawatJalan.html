@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klinik Rawat Jalan - RS Adhyaksa Banten</title>
+
+  <!-- Link CSS utama -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="logoKejaksaan.png" alt="RS Adhyaksa Banten" />
+        <img src="Sehati.png" alt="">
+        <h1>Rumah Sakit Adhyaksa Banten</h1>
+      </div>
+
+      <nav>
+        <button class="menu-toggle">☰</button>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="about2.html">Tentang Kami</a></li>
+          <li><a href="index.html#services" class="active">Layanan</a></li>
+          <li><a href="index.html#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-parallax">
+    
+  </section>
+
+  <!-- GRID KLINIK -->
+  <section class="clinic-grid" data-aos="fade-up">
+    <div class="clinic-card" onclick="openModal('klinik1')"><h4>Klinik Bedah</h4></div>
+    <div class="clinic-card" onclick="openModal('klinik2')"><h4>Klinik Bedah Digestif</h4></div>
+    <div class="clinic-card" onclick="openModal('klinik3')"><h4>Klinik Kebidanan & Kandungan</h4></div>
+    <div class="clinic-card" onclick="openModal('klinik4')"><h4>Klinik Forensik / Yustisial</h4></div>
+    <div class="clinic-card" onclick="openModal('klinik5')"><h4>Klinik Paru</h4></div>
+    <div class="clinic-card" onclick="openModal('klinik6')"><h4>Klinik Anestesi</h4></div>
+    <div class="clinic-card" onclick="openModal('klinik7')"><h4>Klinik Penyakit Dalam</h4></div>
+  
+  </section>
+
+  <!-- MODALS -->
+  <!-- Contoh Modal 1 -->
+  <div id="klinik1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('klinik1')">&times;</span>
+      <img src="doktercontoh.jfif" alt="Dokter Klinik Bedah">
+      <h3>dr. Arif Kurnia Timur, Sp.B, FICS, FINACS</h3>
+      <p><strong>Spesialis Bedah Umum</strong></p>
+      <table>
+        <tr><th>Hari</th><th>Jam</th></tr>
+        <tr><td>Senin </td><td>11.30 - 13.30</td></tr>
+        <tr><td>Kamis</td><td>09.00 - 11.00</td></tr>
+        <tr><td>Sabtu</td><td>08.00 - 12.00</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="klinik2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('klinik2')">&times;</span>
+      <img src="doktercontoh.jfif" alt="Dokter Bedah Digestif">
+      <h3>dr. Juli Silvia Vera, Sp.B-KBD</h3>
+      <p><strong>Spesialis Bedah Digestif</strong></p>
+      <table>
+        <tr><th>Hari</th><th>Jam</th></tr>
+        <tr><td>Selasa</td><td>15.00 - 17.00</td></tr>
+        <tr><td>Rabu</td><td>09.00 - 11.00</td></tr>
+        <tr><td>Kamis</td><td>15.00 - 17.00</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="klinik3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('klinik3')">&times;</span>
+      <img src="doktercontoh.jfif" alt="Dokter Kandungan">
+      <h3>dr. Agustinus Darmawan, Sp.OG</h3>
+      <p><strong>Spesialis Kebidanan & Kandungan</strong></p>
+      <table>
+        <tr><th>Hari</th><th>Jam</th></tr>
+        <tr><td>Selasa</td><td>09.00 - 13.00</td></tr>
+        <tr><td>Rabu</td><td>13.00 - 17.00</td></tr>
+        <tr><td>Kamis</td><td>15.00 - 17.00</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="klinik4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('klinik4')">&times;</span>
+      <img src="doktercontoh.jfif" alt="Dokter Forensik">
+      <h3>dr. Agusalam Budiarso, Sp.F</h3>
+      <p><strong>Spesialis Forensik dan Medikolegal</strong></p>
+      <table>
+        <tr><th>Hari</th><th>Jam</th></tr>
+        <tr><td>Senin - Kamis </td><td>13.00 - 16.00</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div id="klinik5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('klinik5')">&times;</span>
+      <img src="doktercontoh.jfif" alt="Dokter Paru">
+      <h3>dr. Sondang Ruth Angelia Sirait, M.Ked(Paru), Sp.P</h3>
+      <p><strong>Spesialis Paru</strong></p>
+      <table>
+        <tr><th>Hari</th><th>Jam</th></tr>
+        <tr><td>Selasa - Rabu</td><td>08.00 - 15.00</td></tr>
+        <tr><td>Kamis</td><td>08.00 - 14.00</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div id="klinik6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('klinik6')">&times;</span>
+      <img src="doktercontoh.jfif" alt="Dokter Anestesi">
+      <h3>Dr. Anton Wirawan, Sp.An</h3>
+      <p><strong>Spesialis Anestesi</strong><br><em></em></p>
+       <table>
+        <tr><th>Hari</th><th>Jam</th></tr>
+        <tr><td>Rabu</td><td>Dengan Perjanjian</td></tr>
+        <tr><td>Kamis</td><td>09.00 - 13.00</td></tr>
+        <tr><td>Jumat</td><td>09.00 - 13.00</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal 7 -->
+  <div id="klinik7" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('klinik7')">&times;</span>
+      <img src="doktercontoh.jfif" alt="Dokter Penyakit Dalam">
+      <h3>Dr. Siti Aulia, Sp.PD</h3>
+      <p><strong>Spesialis Penyakit Dalam</strong></p>
+      <table>
+        <tr><th>Hari</th><th>Jam</th></tr>
+        <tr><td>Jumat</td><td>08.00 - 11.00  &nbsp; &nbsp; 13.00 - 16.00</td></tr>
+        
+
+      </table>
+    </div>
+  </div>
+
+ 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2025 RS Adhyaksa Banten. Semua hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({ duration: 700, once: true });
+
+  // Toggle menu
+  const toggle = document.querySelector('.menu-toggle');
+  const navUL = document.querySelector('nav ul');
+  toggle.addEventListener('click', ()=> navUL.classList.toggle('show'));
+
+  // Modal control
+  function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  // Tutup modal jika klik luar konten
+  window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+      event.target.style.display = 'none';
+    }
+  };
+  </script>
+</body>
+</html>
